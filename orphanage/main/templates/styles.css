@@ -1,0 +1,35 @@
+.nav-bar{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+}
+
+.nav-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold
+}
+
+.background{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 24px; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url('/food.gif');
+    background-size: cover;
+    opacity: 150%;
+    height: 100vh;
+    padding:0;
+    margin:0;
+
+}
+
+.quote{
+    position: absolute;
+  bottom: 0;
+  right: 0; 
+  color: black;
+}
