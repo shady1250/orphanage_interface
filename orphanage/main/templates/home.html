@@ -2,11 +2,26 @@
     <head>
         <link rel="stylesheet" href="static/css/styles.css">
         <div class="nav-bar">        
-            <div class="nav-item">Home</div>
-            <div class="nav-item">Gallery</div>
-            <div class="nav-item">Donate</div>
-            <div class="nav-item">Volunteering</div>
-            <div class="nav-item">Celebrate</div>
+            <div class="nav-item">
+                <a href="{% url 'home' %}"> Home </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{% url 'gallery' %}"> Gallery </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{% url 'donate' %}">Donate </a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{% url 'volunteering' %}"> Volunteering </a>
+            </div>
+
+
+            <div class="nav-item">
+                <a href="{% url 'celebrate' %}"> Celebrate </a>
+            </div>
         </div>
 
     </head>
