@@ -1,1 +1,13 @@
-<h1>Volunteering Registration Page</h1>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/donate.css">
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            
+            <button type="submit" value="submit">Volunteer!</button>
+        </form>
+    </body>
+</html>

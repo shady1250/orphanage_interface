@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "main"
+    "main",
+    'crispy_forms',     #changes
+    'crispy_bootstrap5',  #changes
 ]
 
 MIDDLEWARE = [
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'orphanage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'software_lab', 
+        'NAME': 'orphanage_data', 
         'USER': 'shady',
         #'PASSWORD': 'your_db_password',
         'HOST': '127.0.0.1', 
@@ -104,7 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"  #changes
+CRISPY_TEMPLATE_PACK = "bootstrap5"             #changes
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
