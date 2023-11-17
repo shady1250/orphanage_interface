@@ -36,7 +36,7 @@ def volunteering(request):
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             phone_number = form.cleaned_data['phone_number']
-            dropdown_selected = form.cleaned_data['dropdown_field']
+            dropdown_selected = form.cleaned_data['Available_Activities']
 
             existing_instance = Volunteer_Work.objects.get(volun=dropdown_selected)
             existing_instance.first_name = first_name
