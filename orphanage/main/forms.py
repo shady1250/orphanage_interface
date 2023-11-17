@@ -14,9 +14,9 @@ class InputFormVolunteer(forms.Form):
 	first_name = forms.CharField(max_length = 200)
 	last_name = forms.CharField(max_length = 200)
 	phone_number = forms.CharField(max_length=10)
-	dropdown_field = forms.ModelChoiceField(queryset=Volunteer_Work.objects.none())
+	Available_Activities = forms.ModelChoiceField(queryset=Volunteer_Work.objects.none())
 
 	def __init__(self, *args, **kwargs):
 		super(InputFormVolunteer, self).__init__(*args, **kwargs)
-		self.fields['dropdown_field'].queryset = Volunteer_Work.objects.filter(available='yes')
+		self.fields['Available_Activities'].queryset = Volunteer_Work.objects.filter(available='yes')
 

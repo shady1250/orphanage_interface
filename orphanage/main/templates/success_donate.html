@@ -61,6 +61,18 @@
   </div>
 
   <script>
+    window.history.pushState(null, '', window.location.href);
+    window.onpopstate = function () {
+        window.history.go(1);
+    };
+</script>
+<script>
+    setTimeout(function () {
+        window.location.href = "{% url 'home' %}";
+    }, 2000);  
+</script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       document.querySelector(".loading-spinner").style.display = "none";
       document.getElementById("success-container").style.display = "block";
