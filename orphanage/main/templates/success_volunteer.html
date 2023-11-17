@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha256-dl8FMEg9v5z8yu5ZZTfgLVeJLbsr5N3OvO8nQFzP7Zk=" crossorigin="anonymous" />
+  <title>Registration Successful</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #eff6f6; 
+      background-image: url('https://www.alliance2020.com/wp-content/uploads/Hands-Raised.jpeg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .loading-spinner {
+      font-size: 4em;
+      color: #fff;
+      animation: spin 1s linear infinite;
+    }
+
+    .success-container {
+      display: none;
+      text-align: center;
+      background-color: rgba(145, 219, 229, 0.9); /* White with some transparency */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      color: #4caf50; /* Dark Green */
+    }
+
+    p {
+      color: #333;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loading-spinner"><i class="fas fa-spinner"></i></div>
+
+  <div class="success-container" id="success-container">
+    <h2>Thank You!</h2>
+    <p>We appreciate your willingness to Volunteer.</p>
+  </div>
+
+  <script>
+    // Simulating a delay to showcase the loading spinner
+    setTimeout(function() {
+      document.querySelector(".loading-spinner").style.display = "none";
+      document.getElementById("success-container").style.display = "block";
+    }, ); // You can adjust the delay time as needed
+  </script>
+
+</body>
+</html>

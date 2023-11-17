@@ -1,1 +1,22 @@
-<h1>GALLERY PAGE</h1>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+     
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+</head>
+<body style="background-color:#60bc0f;">
+
+    <div class="header">Gallery</div>
+    {% for photo in photo %}
+<div class="container">
+	
+	<div class="box"><div class="imgBox">
+		<img src="{{photo.img.url}}" width="300" height="240">
+		<div class="details"><div class="content"><h4>{{photo.info}}</h4><p>smile foundations</p></div></div> 
+	</div></div>
+</div>
+{% endfor %}
+</body>
+</html>

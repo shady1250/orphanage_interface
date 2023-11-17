@@ -23,7 +23,7 @@ def donate(request):
                 amount=form.cleaned_data['amount'],
                 email=form.cleaned_data['email'])
             obj.save()
-            return redirect("success")
+            return redirect("success_donate")
     else:
         form=InputForm()
     return render(request, "donate.html",{'form': form})
@@ -45,7 +45,7 @@ def volunteering(request):
             existing_instance.available='no'
             
             existing_instance.save()  
-            return redirect("success")
+            return redirect("success_volunteer")
     else:
         form = InputFormVolunteer()
 
@@ -54,5 +54,8 @@ def volunteering(request):
 def celebrate(request):
     return render(request, "celebrate.html")
 
-def success(request):
-    return render(request, "success.html")
+def success_donate(request):
+    return render(request, "success_donate.html")
+
+def success_volunteer(request):
+    return render(request, "success_volunteer.html")
