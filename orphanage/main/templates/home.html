@@ -24,14 +24,91 @@
         </div>
     </div>
 </head>
-<body class="background">
-    <h1 class="quote">
-        "No one has ever become poor from giving"
-    </h1>
+<body>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="https://images.yourstory.com/cs/4/656f3140-2d6a-11e9-aa97-9329348d4c3e/MotherTeresa_image11566212805067.png" width="1450" height="500">
+          </div>
+        
+        <div class="mySlides fade">
+          <img src="https://i.ytimg.com/vi/d9h4gbZnfrY/maxresdefault.jpg" width="1450" height="500">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://www.azquotes.com/image-quotes/Quotation-Ronald-Reagan-We-can-t-help-everyone-but-everyone-can-help-someone-24-11-76.jpg" width="1450" height="500">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://quotefancy.com/media/wallpaper/3840x2160/4678196-Winston-Churchill-Quote-We-make-a-living-by-what-we-get-We-make-a.jpg" width="1450" height="500">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://pbs.twimg.com/media/FmmjaeAWYAEtnWK.jpg:large" width="1450" height="500">
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>  
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+
+     <br>
+<div class="information-container">
+    <div class="information-image">
+        <img src="https://images.squarespace-cdn.com/content/v1/58f4c8cad1758ec58b2bcc52/1606398684004-QWSV47XU5FA54YVA9CON/Food-parcels-happy-wave-HD-1080p.gif?format=1500w" alt="Image">
+    </div>
+    <div class="information-content">
+        <h1>Our Home 🏠- The Orphanage</h1>
+        <h2>Welcome to the Family 🫂</h2>
+        <p style="font-size: larger;">In the heart of every child is a hunger for home. Not just for food and a place to sleep, but for safety and community. Most importantly: for love. At <important>OUR HOME</important>, we are much more than a home for children from difficult and desperate circumstances.</p>
+        <p style="font-size: larger;">We are a family, where love guides us all as we grow and expand year after year. Not just a regular children’s home, we are a nearly self-sustaining organization; a working farm, a vibrant school, receiving no government assistance of any kind. Take a look around and if you have any questions just get in contact with us via the menu above!</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="information-container-reverse">
+    <div class="content">
+        <h1>What we do</h1>
+        <p style="font-size: larger;">Our Home is an independent, non-governmental, social development organization that has been providing support to those in need since 2022. ‘The Mission’ works in an array of areas, support to lepers, vocational training, education, disaster relief etc. but it’s primary focus is the care and protection of children in need.</p>
+        <p style="font-size: larger;">The Mission works hard to provide a loving home and family for every child in its care working hard to promote family relationships and impart a spirit of responsibility in every member of the organization.</p>
+        <p style="font-size: larger;">For more than 12 months, with the help of caring individuals worldwide and a lot of hard work, we wake up each day with the same goal: to bring as much love to as many children as possible. It’s not always easy, it comes with a long list of challenges to overcome… but we are doing it! Lives are being changed and stories rewritten. We are excited to have you along for the ride. </p>
+    </div>
+        <img src="https://static.vecteezy.com/system/resources/previews/024/893/055/non_2x/a-cheerful-group-of-indian-school-children-smiling-for-portrait-generated-by-ai-photo.jpg" alt="Image" width="650" height="380">
+</div>   
 
 
-</body>
+
     <footer>
         <p>&copy; 2023 Our Home. All rights reserved.</p>
       </footer>
+    </body>
 </html>
