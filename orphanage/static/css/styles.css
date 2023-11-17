@@ -17,8 +17,7 @@
     font-size: 24px; 
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    background: rgba(0, 0, 0, 0.5);
-    background-image: url('food.gif');
+    background: rgba(0, 0, 0, 0.5) url('food.gif') fixed center;
     background-size: cover;
     opacity: 150%;
     height: 100vh;
@@ -29,7 +28,7 @@
 
 .quote{
     position: absolute;
-  bottom: 0;
+  bottom: 6%;
   right: 0; 
   color: black;
 }
@@ -37,4 +36,15 @@
 a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: white;
+}
+
+footer {
+  position: fixed; /* or position: absolute; */
+  bottom: 0;
+  width: 100%; /* or set a specific width like width: 80%; */
+  background-color: #786565;
+  color: white;
+  font-size: medium;
+  text-align: center;
+  padding: 10px;
 }

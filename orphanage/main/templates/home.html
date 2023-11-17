@@ -1,34 +1,37 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="static/css/styles.css">
-        <div class="nav-bar">        
-            <div class="nav-item">
-                <a href="{% url 'home' %}"> Home </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{% url 'gallery' %}"> Gallery </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{% url 'donate' %}">Donate </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{% url 'volunteering' %}"> Volunteering </a>
-            </div>
-
-
-            <div class="nav-item">
-                <a href="{% url 'celebrate' %}"> Celebrate </a>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <div class="nav-bar">        
+        <div class="nav-item">
+            <a href="{% url 'home' %}"> Home </a>
         </div>
 
-    </head>
-    <body class="background">
-        <h1 class="quote">
-            "No one has ever become poor from giving"
-        </h1>
-        
-    </body>
+        <div class="nav-item">
+            <a href="{% url 'gallery' %}"> Gallery </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'donate' %}"> Donate </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'volunteering' %}"> Volunteering </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'celebrate' %}"> Celebrate </a>
+        </div>
+    </div>
+</head>
+<body class="background">
+    <h1 class="quote">
+        "No one has ever become poor from giving"
+    </h1>
+
+
+</body>
+    <footer>
+        <p>&copy; 2023 Our Home. All rights reserved.</p>
+      </footer>
 </html>

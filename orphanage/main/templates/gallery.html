@@ -1,22 +1,83 @@
-{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-     
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/gallery.css">
+    <title>Gallery</title>
 </head>
-<body style="background-color:#60bc0f;">
+<body>
 
-    <div class="header">Gallery</div>
-    {% for photo in photo %}
-<div class="container">
-	
-	<div class="box"><div class="imgBox">
-		<img src="{{photo.img.url}}" width="300" height="240">
-		<div class="details"><div class="content"><h4>{{photo.info}}</h4><p>smile foundations</p></div></div> 
-	</div></div>
+<div class="gallery-container">
+    <h1 class="gallery-heading">GALLERY</h1>
+
+    <div class="gallery">
+        <!-- Row 1 -->
+        <div class="gallery-row">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="https://static.toiimg.com/thumb/msid-56209220,width-1280,height-720,resizemode-4/56209220.jpg" alt="Image 1" >
+                <div class="image-info">
+                    <h3>Prayer Time</h3>
+                    <p>Kids gathered with Traditional wear for Morning prayer.</p>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="https://www.worldschildren.org/wp-content/uploads/2021/11/Kavinisty-celebrated-her-Diwali-with-us-3-pr.jpg" alt="Image 2">
+                <div class="image-info">
+                    <h3>Happy Diwali</h3>
+                    <p>Celebrations of Festival of Lights and Joy at Our Home.</p>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="https://metrolina.org/wp-content/uploads/2021/01/avel-chuklanov-Ks4t8IK8Kgw-unsplash-scaled.jpg" alt="Image 3">
+                <div class="image-info">
+                    <h3>Play Time</h3>
+                    <p>Children at Play hour time in the Orphanage</p>
+                </div>
+            </div>
+        </div>
+		<br>
+
+        <!-- Row 2 -->
+        <div class="gallery-row">
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="https://www.globalgiving.org/pfil/9316/14_Large.jpg" alt="Image 4">
+                <div class="image-info">
+                    <h3>Dance Show</h3>
+                    <p>Cultural Event with Music,Dance,Art,Drama,... in Our Home </p>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="gallery-item">
+                <img src="https://www.globalgiving.org/pfil/24641/ph_24641_159298.jpg" alt="Image 5">
+                <div class="image-info">
+                    <h3>Grateful</h3>
+                    <p>Being Thankful to the God for his gift on Earth</p>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="gallery-item">
+                <img src="https://assets.thehansindia.com/hansindia-bucket/2407_actress1.jpg" alt="Image 6">
+                <div class="image-info">
+                    <h3>Study Time</h3>
+                    <p>People donating books and spending time at Our Home</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{% endfor %}
+
+<footer>
+    <p>&copy; 2023 Our Home Gallery. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
