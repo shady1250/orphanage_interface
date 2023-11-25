@@ -1,9 +1,8 @@
-from django.shortcuts import render, HttpResponse , get_object_or_404
+from django.shortcuts import render
 from django.shortcuts import render
 from .forms import InputForm, InputFormVolunteer, InputFormCelebrations
 from django.shortcuts import render, redirect
 from .models import Donate_Money, Volunteer_Work, Celebrate_Together
-from django.http import JsonResponse
 
 def home(request):
     return render(request, "home.html")

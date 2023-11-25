@@ -1,6 +1,5 @@
 from django import forms 
 from .models import Donate_Money, Volunteer_Work, Celebrate_Together
-from tempus_dominus.widgets import DatePicker
 
 
 class InputForm(forms.Form): 
