@@ -1,1 +1,18 @@
-<h1>Celebrations</h1>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/celebrate.css">
+        <title>Celebrate</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p }}
+            <br>
+            <br>
+            <br>
+            <button type="submit" value="submit">Celebrate</button>
+        </form>
+
+    </body>
+    
+</html>

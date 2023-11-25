@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha256-dl8FMEg9v5z8yu5ZZTfgLVeJLbsr5N3OvO8nQFzP7Zk=" crossorigin="anonymous" />
-  <title>Donation Successful</title>
+  <title>Registration Successful</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -14,8 +14,8 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: #8bc34a; /* Light Green */
-      background-image: url('https://img.freepik.com/free-photo/plump-little-girl-sits-white-blanket_8353-432.jpg?w=1380&t=st=1700910216~exp=1700910816~hmac=5ee20b93b7aba79796d267212e633009f4d5c99a722d91d647814be53feb89f2'); 
+      background-color: #eff6f6; 
+      background-image: url('https://img.freepik.com/free-photo/plump-little-girl-sits-white-blanket_8353-432.jpg?w=1380&t=st=1700910216~exp=1700910816~hmac=5ee20b93b7aba79796d267212e633009f4d5c99a722d91d647814be53feb89f2'); /* Replace with your image URL */
       background-size: cover;
       background-position: center;
     }
@@ -27,14 +27,13 @@
     }
 
     .success-container {
-      display: left;
+      display: none;
       text-align: center;
-      background-color: rgba(189, 234, 239, 0.814); /* White with some transparency */
+      background-color: rgba(145, 219, 229, 0.9); /* White with some transparency */
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
-      margin-right:60%;
     }
 
     h2 {
@@ -57,27 +56,22 @@
 
   <div class="success-container" id="success-container">
     <h2>Thank You!</h2>
-    <p>Your Contribution to Our Home is Priceless .</p>
+    <p>We appreciate you for having us in the part of the celebrations!</p>
   </div>
 
   <script>
-    window.history.pushState(null, '', window.location.href);
-    window.onpopstate = function () {
-        window.history.go(1);
-    };
-</script>
-<script>
-    setTimeout(function () {
-        window.location.href = "{% url 'home' %}";
-    }, 2000);  
-</script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    // Simulating a delay to showcase the loading spinner
+    setTimeout(function() {
       document.querySelector(".loading-spinner").style.display = "none";
       document.getElementById("success-container").style.display = "block";
-    });
+    }, ); // You can adjust the delay time as needed
   </script>
+
+<script>
+  setTimeout(function () {
+      window.location.href = "{% url 'home' %}";
+  }, 2000);  
+</script>
   </body>
 
 

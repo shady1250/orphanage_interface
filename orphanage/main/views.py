@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponse , get_object_or_404
 from django.shortcuts import render
-from .forms import InputForm, InputFormVolunteer
+from .forms import InputForm, InputFormVolunteer, InputFormCelebrations
 from django.shortcuts import render, redirect
-from .models import Donate_Money, Volunteer_Work
+from .models import Donate_Money, Volunteer_Work, Celebrate_Together
+from django.http import JsonResponse
 
 def home(request):
     return render(request, "home.html")
@@ -38,7 +39,7 @@ def volunteering(request):
             phone_number = form.cleaned_data['phone_number']
             dropdown_selected = form.cleaned_data['Available_Activities']
 
-            existing_instance = Volunteer_Work.objects.get(volun=dropdown_selected)
+            existing_instance =Volunteer_Work.objects.get(volun=dropdown_selected)
             existing_instance.first_name = first_name
             existing_instance.last_name = last_name
             existing_instance.phone_number = phone_number
@@ -48,14 +49,31 @@ def volunteering(request):
             return redirect("success_volunteer")
     else:
         form = InputFormVolunteer()
-
     return render(request, 'volunteering.html', {'form': form})
 
 def celebrate(request):
-    return render(request, "celebrate.html")
+    if request.method == 'POST':
+        form = InputFormCelebrations(request.POST)
+        if form.is_valid():
+            obj = Celebrate_Together(
+                first_name=form.cleaned_data['first_name'],
+                last_name=form.cleaned_data['last_name'],
+                phone_number=form.cleaned_data['phone_number'],
+                reason=form.cleaned_data['reason'],
+                email=form.cleaned_data['email'],
+                date_field=form.cleaned_data['date_field'])
+            obj.save()
+            return redirect("success_celebrate")
+    else:
+        form=InputFormCelebrations()
+    return render(request, "celebrate.html",{'form': form})
 
 def success_donate(request):
     return render(request, "success_donate.html")
 
 def success_volunteer(request):
     return render(request, "success_volunteer.html")
+
+def success_celebrate(request):
+    return render(request, "success_celebrate.html")
+

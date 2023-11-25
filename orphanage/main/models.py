@@ -19,3 +19,14 @@ class Volunteer_Work(models.Model):
 
     def __str__(self):
         return f"{self.volun}"
+    
+
+class Celebrate_Together(models.Model):
+    first_name = models.CharField(max_length=30,null = True)
+    last_name = models.CharField(max_length=30,null = True)
+    phone_number = models.CharField(max_length=10,null = True)
+    reason=models.CharField(max_length=30,null = True)
+    email = models.EmailField(default='',null = True)
+    date_field=models.DateField(null=True)
+
+
