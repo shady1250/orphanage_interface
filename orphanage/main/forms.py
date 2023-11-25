@@ -31,5 +31,12 @@ class InputFormCelebrations(forms.Form):
 	email = forms.EmailField()
 	reason = forms.CharField(max_length=30)
 	date_field = forms.DateField(widget=DateInput)
+
+class InputContactInfo(forms.Form):
+	name = forms.CharField(max_length = 200)
+	phone_number = forms.CharField(max_length=10)
+	email = forms.EmailField()
+	subject=forms.CharField(max_length=30)
+	Message=forms.CharField(max_length=1000)
 	
 	

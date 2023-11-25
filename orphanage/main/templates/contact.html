@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/contact.css">
+        <title>Contact</title>
+    </head>
+
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{form }}
+            
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </body>
+</html>

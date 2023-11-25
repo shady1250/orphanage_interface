@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import render
-from .forms import InputForm, InputFormVolunteer, InputFormCelebrations
+from .forms import InputForm, InputFormVolunteer, InputFormCelebrations, InputContactInfo
 from django.shortcuts import render, redirect
-from .models import Donate_Money, Volunteer_Work, Celebrate_Together
+from .models import Donate_Money, Volunteer_Work, Celebrate_Together, Contact_info
 
 def home(request):
     return render(request, "home.html")
@@ -67,6 +67,23 @@ def celebrate(request):
         form=InputFormCelebrations()
     return render(request, "celebrate.html",{'form': form})
 
+
+def contact(request):
+    if request.method == 'POST':
+        form = InputContactInfo(request.POST)
+        if form.is_valid():
+            obj = Contact_info(
+                name=form.cleaned_data['name'],
+                phone_number=form.cleaned_data['phone_number'],
+                email=form.cleaned_data['email'],
+                subject=form.cleaned_data['subject'],
+                message=form.cleaned_data['message'])
+            obj.save()
+            return redirect("home")
+    else:
+        form=InputContactInfo()
+    return render(request, "contact.html",{'form': form})
+
 def success_donate(request):
     return render(request, "success_donate.html")
 
@@ -75,4 +92,5 @@ def success_volunteer(request):
 
 def success_celebrate(request):
     return render(request, "success_celebrate.html")
+
 

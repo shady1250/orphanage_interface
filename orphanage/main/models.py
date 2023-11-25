@@ -29,4 +29,11 @@ class Celebrate_Together(models.Model):
     email = models.EmailField(default='',null = True)
     date_field=models.DateField(null=True)
 
+class Contact_info(models.Model):
+    name = models.CharField(max_length = 200)
+    phone_number = models.CharField(max_length=10)
+    email = models.EmailField()
+    subject=models.CharField(max_length=30)
+    Message=models.CharField(max_length=1000)
+
 
