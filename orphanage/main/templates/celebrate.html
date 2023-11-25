@@ -1,18 +1,57 @@
 <html>
     <head>
         <link rel="stylesheet" href="static/css/celebrate.css">
+        <link rel="stylesheet" href="static/css/styles.css">
         <title>Celebrate</title>
+        <style>
+            footer {
+            background-color:black;
+            color:grey;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0%;
+            }
+            </style>
     </head>
     <body>
+        <div class="nav-bar">        
+            <div class="nav-item">
+                <a href="{% url 'home' %}"> Home </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'gallery' %}"> Gallery </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'donate' %}"> Donate </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'volunteering' %}"> Volunteering </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'celebrate' %}"> Celebrate </a>
+            </div>
+    
+            <div class="nav-item">
+              <a href="{% url 'contact' %}"> Contact Us </a>
+          </div>
+    
+    
+        </div>
+        <div class="form-container">
         <form method="post">
             {% csrf_token %}
             {{form.as_p }}
             <br>
-            <br>
-            <br>
             <button type="submit" value="submit">Celebrate</button>
         </form>
-
+        </div>
+        <footer>
+            <p>&copy; 2023 Our Home. All rights reserved.</p>
+          </footer>
     </body>
     
 </html>

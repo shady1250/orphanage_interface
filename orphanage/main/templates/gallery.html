@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/gallery.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <div class="nav-bar">        
+        <div class="nav-item">
+            <a href="{% url 'home' %}"> Home </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'gallery' %}"> Gallery </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'donate' %}"> Donate </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'volunteering' %}"> Volunteering </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'celebrate' %}"> Celebrate </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="{% url 'contact' %}"> Contact Us </a>
+        </div>
+    </div>
     <title>Gallery</title>
 </head>
 <body>
 
 <div class="gallery-container">
-    <h1 class="gallery-heading">GALLERY</h1>
+    <h1  style="color: blanchedalmond;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Happy Times in Our Home</h1>
 
     <div class="gallery">
         <!-- Row 1 -->

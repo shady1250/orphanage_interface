@@ -1,18 +1,59 @@
 <html>
     <head>
         <link rel="stylesheet" href="static/css/volunteering.css">
+        <link rel="stylesheet" href="static/css/styles.css">
         <title>Volunteer Registration</title>
+        <style>
+        footer {
+            background-color:black;
+            color:grey;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: -3% !important;
+            }
+            </style>
     </head>
     <body>
+        <div class="nav-bar">        
+            <div class="nav-item">
+                <a href="{% url 'home' %}"> Home </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'gallery' %}"> Gallery </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'donate' %}"> Donate </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'volunteering' %}"> Volunteering </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'celebrate' %}"> Celebrate </a>
+            </div>
+    
+            <div class="nav-item">
+              <a href="{% url 'contact' %}"> Contact Us </a>
+          </div>
+    
+    
+        </div>
+        <br>
+        <br>
+        <h1 style="margin-left: 40%;color: whitesmoke;">Volunteer Form</h1>
+        <div class="form-container">
         <form method="post">
             {% csrf_token %}
             {{form}}
             
             <br>
             <br>
-            <br>
             <button type="submit" value="submit">Volunteer!</button>
         </form>
+    </div>
     </body>
        
     

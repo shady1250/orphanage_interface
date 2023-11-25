@@ -93,4 +93,10 @@ def success_volunteer(request):
 def success_celebrate(request):
     return render(request, "success_celebrate.html")
 
+def adopt(request):
+    return render(request, "adopt.html")
+
+def sponsorship(request):
+    return render(request, "sponsorship.html")
+
 

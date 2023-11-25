@@ -8,22 +8,20 @@ body {
     background-image: url('https://s1.1zoom.me/big0/138/Airplane_Little_girls_472087.jpg');
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
 }
 
 
-form {
-    background-color: #ffffff;
+.form-container {
+    max-width: 400px;
+    background-color: rgb(149, 204, 178);
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     border-radius: 5px;
-    margin-right: 60%;
+    margin-left: 5%;
 }
 
 label {
@@ -64,9 +62,3 @@ button:hover {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #786565;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}

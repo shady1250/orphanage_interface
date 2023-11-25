@@ -1,15 +1,61 @@
 <html>
     <head>
         <link rel="stylesheet" href="static/css/contact.css">
+        <link rel="stylesheet" href="static/css/styles.css">
         <title>Contact</title>
+        <style>
+            footer {
+            background-color:black;
+            color:grey;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: -3%;
+            }
+            </style>
+
     </head>
 
     <body>
+        <div class="nav-bar">        
+            <div class="nav-item">
+                <a href="{% url 'home' %}"> Home </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'gallery' %}"> Gallery </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'donate' %}"> Donate </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'volunteering' %}"> Volunteering </a>
+            </div>
+    
+            <div class="nav-item">
+                <a href="{% url 'celebrate' %}"> Celebrate </a>
+            </div>
+    
+            <div class="nav-item">
+              <a href="{% url 'contact' %}"> Contact Us </a>
+          </div>
+    
+    
+        </div>
+        <br>
+        <div class="form-container">
         <form method="post">
             {% csrf_token %}
             {{form }}
             
             <button type="submit" value="submit">Submit</button>
         </form>
+        </div>
+        <br>
+        <footer>
+        <p>&copy; 2023 Our Home. All rights reserved.</p>
+      </footer>
     </body>
+    
 </html>
