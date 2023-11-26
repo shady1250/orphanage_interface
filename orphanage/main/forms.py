@@ -3,6 +3,8 @@ from .models import Donate_Money, Volunteer_Work, Celebrate_Together
 from django.forms import widgets
 from datetime import date
 
+#define required forms
+
 class InputForm(forms.Form): 
 	first_name = forms.CharField(max_length = 200) 
 	last_name = forms.CharField(max_length = 200) 

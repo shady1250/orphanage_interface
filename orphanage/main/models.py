@@ -1,5 +1,6 @@
 from django.db import models
 
+#define required models
 
 class Donate_Money(models.Model):
 

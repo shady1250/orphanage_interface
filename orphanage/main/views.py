@@ -14,7 +14,7 @@ def gallery(request):
 def donate(request):
     if request.method == 'POST':
         form = InputForm(request.POST)
-        if form.is_valid():
+        if form.is_valid(): #copying from i/p and storing it in db
             obj = Donate_Money(
                 first_name=form.cleaned_data['first_name'],
                 last_name=form.cleaned_data['last_name'],
@@ -25,7 +25,7 @@ def donate(request):
             obj.save()
             return redirect("success_donate")
     else:
-        form=InputForm()
+        form=InputForm() #rendering the form 
     return render(request, "donate.html",{'form': form})
 
 def volunteering(request):
@@ -33,7 +33,7 @@ def volunteering(request):
     if request.method == 'POST':
         form = InputFormVolunteer(request.POST)
         if form.is_valid():
-            first_name = form.cleaned_data['first_name']
+            first_name = form.cleaned_data['first_name'] #copying from i/p and storing it in db
             last_name = form.cleaned_data['last_name']
             phone_number = form.cleaned_data['phone_number']
             dropdown_selected = form.cleaned_data['Available_Activities']
@@ -42,12 +42,12 @@ def volunteering(request):
             existing_instance.first_name = first_name
             existing_instance.last_name = last_name
             existing_instance.phone_number = phone_number
-            existing_instance.available='no'
+            existing_instance.available='no' #updating that a volunteer work is taken
             
             existing_instance.save()  
             return redirect("success_volunteer")
     else:
-        form = InputFormVolunteer()
+        form = InputFormVolunteer() #rendering the form
     return render(request, 'volunteering.html', {'form': form})
 
 def celebrate(request):
