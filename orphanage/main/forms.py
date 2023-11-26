@@ -1,6 +1,7 @@
 from django import forms 
 from .models import Donate_Money, Volunteer_Work, Celebrate_Together
-
+from django.forms import widgets
+from datetime import date
 
 class InputForm(forms.Form): 
 	first_name = forms.CharField(max_length = 200) 
@@ -30,7 +31,7 @@ class InputFormCelebrations(forms.Form):
 	phone_number = forms.CharField(max_length=10)
 	email = forms.EmailField()
 	reason = forms.CharField(max_length=30)
-	date_field = forms.DateField(widget=DateInput)
+	date_field = forms.DateField(widget=DateInput(attrs={'type': 'date', 'min': str(date.today())}))
 
 class InputContactInfo(forms.Form):
 	name = forms.CharField(max_length = 200)
